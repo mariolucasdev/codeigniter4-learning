@@ -37,12 +37,13 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-// Rotas de Produtos
+// Rotas Get para Produtos
 $routes->get('/produto', 'Produto::index');
 $routes->get('/produto/cadastrar', 'Produto::cadastrar');
 $routes->get('/produto/editar/(:num)', 'Produto::editar/$1');
 $routes->get('/produto/excluir/(:num)', 'Produto::excluir/$1');
 
+// Rotas Post para Produtos
 $routes->post('/produto/save', 'Produto::salvar');
 $routes->post('/produto/save/(:num)', 'Produto::salvar/$1');
 
